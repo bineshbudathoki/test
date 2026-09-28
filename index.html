@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Portfolio</title>
+</head>
+
+<body>
+
+    <img src="Assets/logo.jpeg" alt="Website Logo" width="80" height="80">
+
+    <input type="search" placeholder="Search..." aria-label="Search">
+
+    <nav>
+        <ul>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <header id="home">
+        <img src="Assets/profile.jpeg" alt="Portrait of me" width="192" height="256">
+        <h1>My Portfolio</h1>
+    </header>
+
+    <section id="about">
+        <h2>About Me</h2>
+        <p>I am a passionate and creative individual with a strong interest in technology, design, and problem-solving. I enjoy learning new skills, building useful projects, and turning ideas into practical solutions that make a difference.</p>
+    </section>
+
+    <section id="education">
+        <h1>Education</h1>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Course</th>
+                    <th>Institution</th>
+                    <th>Year</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>BSc Computer Science</td>
+                    <td>University</td>
+                    <td>2026</td>
+                </tr>
+                <tr>
+                    <td>Web Development</td>
+                    <td>Online Course</td>
+                    <td>2025</td>
+                </tr>
+      </tbody>
+    </table>
+    </section>
+
+    <section id="skills">
+        <h2>My Skills</h2>
+        <dl>
+            <dt>Programming Languages</dt>
+            <dd>Python, JavaScript, C++</dd>
+
+            <dt>Web Development</dt>
+            <dd>HTML, CSS, React</dd>
+
+            <dt>Database Management</dt>
+            <dd>MySQL, MongoDB</dd>
+
+            <dt>Version Control</dt>
+            <dd>Git, GitHub</dd>
+        </dl>
+    </section>
+
+    <section id="projects">
+        <h2>My Projects</h2>
+        <article>
+            <h3>E-commerce Site</h3>
+            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.</p>
+        </article>
+    </section>
+
+    <section id="contact">
+        <h2>Contact Me</h2>
+        <form>
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" placeholder="Your name" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" placeholder="your@email.com"><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea><br><br>
+
+            <button type="submit">Send</button>
+        </form>
+    </section>
+
+    <footer>
+        <p>© 2026 All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
