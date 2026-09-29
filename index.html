@@ -1,104 +1,1441 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>My Portfolio</title>
-</head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Portfolio of Binesh Budathoki | Student Archivist & Digital Strategist</title>
+  <meta name="description" content="Official portfolio of Binesh Budathoki - BIT Undergraduate Scholar at IAU MIT Nepal & SEO Specialist at GROW IT Agency.">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="apple-touch-icon" href="favicon.png">
 
+  <!-- Google Fonts: Bebas Neue (Retro Woodblock), Playfair Display (Editorial Serif), Courier Prime (Typewriter Mono) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700&display=swap" rel="stylesheet">
+
+  <style>
+    /* ==========================================================================
+       VINTAGE RETRO POSTER & HALFTONE BROADSHEET DESIGN SYSTEM
+       Inspired by Mid-Century Print, Halftone Screenprints & Archival Ledgers
+       ========================================================================== */
+    :root {
+      /* Warm Antique Pulp Paper Palette */
+      --bg-desk: #BCAB8C;
+      --bg-paper: #D9C8A8;
+      --bg-paper-light: #E4D7BD;
+      --bg-card: #CEBCA0;
+      --bg-card-dark: #C2B093;
+      
+      /* Screenprint Inks */
+      --ink-black: #1B1612;
+      --ink-charcoal: #2A231C;
+      --ink-muted: #574B3E;
+      
+      /* Vibrant Retro Spot Inks */
+      --retro-red: #B83424;
+      --retro-red-dark: #8F2417;
+      --retro-teal: #244C5A;
+      --retro-teal-dark: #17333D;
+      --retro-gold: #C08A34;
+      --retro-gold-dark: #91631B;
+      --retro-cream: #FAF2DF;
+
+      /* Typography */
+      --font-display: 'Bebas Neue', Impact, sans-serif;
+      --font-serif: 'Playfair Display', Georgia, serif;
+      --font-mono: 'Courier Prime', Courier, monospace;
+
+      /* Retro Hard 3D Shadows */
+      --shadow-block: 4px 4px 0px var(--ink-black);
+      --shadow-block-lg: 6px 6px 0px var(--ink-black);
+      --shadow-block-sm: 2px 2px 0px var(--ink-black);
+    }
+
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+      font-size: 16px;
+    }
+
+    body {
+      background-color: var(--bg-desk);
+      color: var(--ink-charcoal);
+      font-family: var(--font-mono);
+      line-height: 1.6;
+      padding: 24px 16px;
+      /* Halftone Screen Background Texture */
+      background-image: 
+        radial-gradient(ellipse at 50% 20%, rgba(240, 228, 205, 0.45) 0%, rgba(168, 150, 118, 0.85) 100%),
+        radial-gradient(var(--ink-black) 12%, transparent 13%),
+        repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(27, 22, 18, 0.025) 2px, rgba(27, 22, 18, 0.025) 4px);
+      background-size: 100% 100%, 8px 8px, 100% 4px;
+    }
+
+    /* Broadsheet Poster Shell */
+    .poster-container {
+      max-width: 1220px;
+      margin: 0 auto;
+      background-color: var(--bg-paper);
+      border: 3px solid var(--ink-black);
+      box-shadow: var(--shadow-block-lg);
+      position: relative;
+    }
+
+    /* Authentic Checkered Racing Trim (Inspired by Absolut Poster Ref) */
+    .checker-strip {
+      height: 14px;
+      background-image: 
+        linear-gradient(45deg, var(--retro-red) 25%, transparent 25%), 
+        linear-gradient(-45deg, var(--retro-red) 25%, transparent 25%), 
+        linear-gradient(45deg, transparent 75%, var(--retro-red) 75%), 
+        linear-gradient(-45deg, transparent 75%, var(--retro-red) 75%);
+      background-size: 14px 14px;
+      background-position: 0 0, 0 7px, 7px -7px, -7px 0px;
+      background-color: var(--retro-cream);
+      border-bottom: 2px solid var(--ink-black);
+    }
+
+    .checker-strip-bottom {
+      border-bottom: none;
+      border-top: 2px solid var(--ink-black);
+    }
+
+    /* Inner Framing */
+    .poster-inner {
+      padding: 24px 28px 32px 28px;
+      border: 2px solid var(--ink-black);
+      margin: 6px;
+      background-color: var(--bg-paper-light);
+      position: relative;
+      /* Subtle Halftone Screen on paper */
+      background-image: radial-gradient(rgba(27, 22, 18, 0.04) 15%, transparent 16%);
+      background-size: 6px 6px;
+    }
+
+    @media (max-width: 768px) {
+      .poster-inner {
+        padding: 16px 12px 24px 12px;
+        margin: 4px;
+      }
+    }
+
+    /* Top Utility Header */
+    .top-utility-bar {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+      border-bottom: 2px solid var(--ink-black);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      font-size: 0.76rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+    }
+
+    .utility-tag {
+      background: var(--retro-red);
+      color: var(--retro-cream);
+      padding: 3px 8px;
+      border: 1px solid var(--ink-black);
+      box-shadow: 2px 2px 0 var(--ink-black);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      letter-spacing: 0.08em;
+    }
+
+    .audio-btn {
+      background: var(--bg-paper);
+      border: 1px solid var(--ink-black);
+      box-shadow: 2px 2px 0 var(--ink-black);
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      padding: 3px 10px;
+      cursor: pointer;
+      text-transform: uppercase;
+      transition: all 0.15s ease;
+    }
+    .audio-btn:hover {
+      background: var(--retro-gold);
+    }
+    .audio-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 0 0 0 var(--ink-black);
+    }
+
+    /* ==========================================================================
+       ARCHIVAL GRAMOPHONE MUSIC PLAYER (Vintage 78 RPM Aesthetic)
+       ========================================================================== */
+    .phonograph-strip {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 12px;
+      background: var(--bg-card);
+      border: 2px solid var(--ink-black);
+      box-shadow: var(--shadow-block-sm);
+      padding: 9px 14px;
+      margin-bottom: 20px;
+      position: relative;
+    }
+
+    .phonograph-strip::after {
+      content: "";
+      position: absolute;
+      bottom: -4px;
+      left: 6px;
+      right: 6px;
+      height: 2px;
+      background: rgba(27, 22, 18, 0.2);
+    }
+
+    .phonograph-left {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .record-disc {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: radial-gradient(circle, var(--retro-red) 18%, #111 20%, #222 26%, #111 34%, #2a2a2a 44%, #111 54%, #222 68%, #111 100%);
+      border: 2px solid var(--ink-black);
+      box-shadow: 1px 1px 3px rgba(0,0,0,0.35);
+      position: relative;
+      flex-shrink: 0;
+      transition: transform 0.2s ease;
+    }
+
+    .record-disc.spinning {
+      animation: spinRecord 2.8s linear infinite;
+    }
+
+    .record-center {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 11px;
+      height: 11px;
+      background: var(--retro-gold);
+      border: 2px solid var(--ink-black);
+      border-radius: 50%;
+    }
+
+    @keyframes spinRecord {
+      from { transform: rotate(0deg); }
+      to { transform: rotate(360deg); }
+    }
+
+    .phonograph-info {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+    }
+
+    .phonograph-label {
+      font-size: 0.68rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      color: var(--retro-red);
+      text-transform: uppercase;
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    .phonograph-status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: #8c857b;
+      border: 1px solid var(--ink-black);
+      display: inline-block;
+    }
+
+    .phonograph-status-dot.active {
+      background: #27ae60;
+      box-shadow: 0 0 6px #27ae60;
+      animation: pulseGreen 1.5s infinite;
+    }
+
+    @keyframes pulseGreen {
+      0%, 100% { opacity: 1; }
+      50% { opacity: 0.35; }
+    }
+
+    .phonograph-track {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-weight: 700;
+      font-size: 0.92rem;
+      color: var(--ink-black);
+      letter-spacing: 0.02em;
+    }
+
+    .phonograph-controls {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+
+    .phono-btn {
+      background: var(--retro-gold);
+      border: 1px solid var(--ink-black);
+      box-shadow: 2px 2px 0 var(--ink-black);
+      font-family: var(--font-display);
+      font-size: 0.95rem;
+      letter-spacing: 0.06em;
+      padding: 5px 12px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      transition: all 0.15s ease;
+      color: var(--ink-black);
+    }
+
+    .phono-btn:hover {
+      background: #e5b32e;
+      transform: translateY(-1px);
+      box-shadow: 3px 3px 0 var(--ink-black);
+    }
+
+    .phono-btn:active {
+      transform: translate(2px, 2px);
+      box-shadow: 0 0 0 var(--ink-black);
+    }
+
+    .phono-btn-sub {
+      background: var(--bg-paper);
+      font-size: 0.82rem;
+      font-family: var(--font-mono);
+      font-weight: 700;
+      padding: 5px 9px;
+    }
+    .phono-btn-sub:hover {
+      background: var(--retro-cream);
+    }
+
+    .phono-vol-wrap {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: var(--bg-paper);
+      border: 1px solid var(--ink-black);
+      padding: 4px 8px;
+      box-shadow: 2px 2px 0 var(--ink-black);
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+
+    .phono-slider {
+      width: 58px;
+      cursor: pointer;
+      accent-color: var(--retro-red);
+    }
+
+    @media (max-width: 800px) {
+      .phonograph-strip {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+      }
+      .phonograph-left {
+        justify-content: flex-start;
+      }
+      .phonograph-controls {
+        justify-content: flex-start;
+      }
+    }
+
+    /* Masthead Header */
+    .masthead {
+      text-align: center;
+      padding-bottom: 20px;
+      border-bottom: 4px double var(--ink-black);
+      position: relative;
+    }
+
+    .masthead-badge-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 16px;
+      margin-bottom: 8px;
+    }
+
+    .emblem-icon-wrap {
+      width: 52px;
+      height: 52px;
+      border: 2px solid var(--ink-black);
+      box-shadow: var(--shadow-block-sm);
+      border-radius: 4px;
+      background: var(--retro-cream);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      transform: rotate(-3deg);
+      transition: transform 0.2s ease;
+    }
+    .emblem-icon-wrap:hover {
+      transform: rotate(0deg) scale(1.05);
+    }
+
+    .emblem-img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .retro-stars {
+      color: var(--retro-red);
+      font-size: 1.15rem;
+      letter-spacing: 0.2em;
+    }
+
+    .masthead-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.8rem, 7vw, 5.4rem);
+      font-weight: 900;
+      letter-spacing: 0.05em;
+      line-height: 0.95;
+      text-transform: uppercase;
+      color: var(--ink-black);
+      text-shadow: 3px 3px 0px var(--retro-cream), 6px 6px 0px rgba(27, 22, 18, 0.25);
+      margin: 6px 0 8px 0;
+    }
+
+    .masthead-tagline {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: clamp(1.1rem, 2.4vw, 1.6rem);
+      color: var(--retro-teal);
+      font-weight: 700;
+      margin-bottom: 14px;
+    }
+
+    /* 3-Part Field of Study Rules Bar */
+    .masthead-rules-bar {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 8px;
+      border-top: 2px solid var(--ink-black);
+      border-bottom: 2px solid var(--ink-black);
+      padding: 6px 8px;
+      font-size: 0.74rem;
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+      background: var(--bg-card);
+    }
+
+    @media (max-width: 820px) {
+      .masthead-rules-bar {
+        grid-template-columns: 1fr;
+        text-align: center;
+        gap: 4px;
+      }
+    }
+
+    /* Navigation Bar */
+    .retro-nav {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      padding: 12px 0;
+      border-bottom: 3px solid var(--ink-black);
+      margin-bottom: 32px;
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+    }
+
+    .retro-nav a {
+      color: var(--ink-black);
+      text-decoration: none;
+      padding: 4px 10px;
+      border: 1px solid transparent;
+      transition: all 0.15s ease;
+      position: relative;
+    }
+
+    .retro-nav a:hover {
+      background: var(--retro-gold);
+      border: 1px solid var(--ink-black);
+      box-shadow: var(--shadow-block-sm);
+      transform: translateY(-2px);
+    }
+
+    .nav-bullet {
+      color: var(--retro-red);
+      font-size: 0.9rem;
+    }
+
+    /* ==========================================================================
+       HERO SECTION (Bold Retro Pop & Screenprint Aesthetic)
+       ========================================================================== */
+    .hero-grid {
+      display: grid;
+      grid-template-columns: 1.85fr 1.15fr;
+      gap: 32px;
+      margin-bottom: 40px;
+      align-items: center;
+    }
+
+    @media (max-width: 950px) {
+      .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+      }
+    }
+
+    .hero-kicker-strip {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--retro-teal);
+      color: var(--retro-cream);
+      padding: 4px 12px;
+      border: 1.5px solid var(--ink-black);
+      box-shadow: var(--shadow-block-sm);
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+
+    .hero-title {
+      font-family: var(--font-display);
+      font-size: clamp(2.6rem, 5.2vw, 4.4rem);
+      font-weight: 900;
+      line-height: 0.96;
+      text-transform: uppercase;
+      color: var(--ink-black);
+      margin-bottom: 16px;
+      text-shadow: 2px 2px 0px var(--bg-paper), 4px 4px 0px var(--retro-red);
+    }
+
+    .hero-subheadline-box {
+      background: var(--bg-card);
+      border: 2px solid var(--ink-black);
+      border-left: 8px solid var(--retro-red);
+      padding: 14px 18px;
+      box-shadow: var(--shadow-block-sm);
+      margin-bottom: 24px;
+      font-family: var(--font-serif);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--ink-black);
+      line-height: 1.5;
+    }
+
+    /* 3D Poster Buttons */
+    .hero-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 16px;
+      align-items: center;
+    }
+
+    .btn-poster-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: var(--retro-red);
+      color: var(--retro-cream);
+      font-family: var(--font-display);
+      font-size: 1.3rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 26px;
+      border: 2px solid var(--ink-black);
+      box-shadow: var(--shadow-block);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-poster-primary:hover {
+      background: var(--retro-red-dark);
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px var(--ink-black);
+    }
+
+    .btn-poster-primary:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px var(--ink-black);
+    }
+
+    .btn-poster-secondary {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: var(--bg-card);
+      color: var(--ink-black);
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      text-decoration: none;
+      padding: 12px 22px;
+      border: 2px solid var(--ink-black);
+      box-shadow: var(--shadow-block);
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-poster-secondary:hover {
+      background: var(--retro-gold);
+      transform: translate(-2px, -2px);
+      box-shadow: 6px 6px 0px var(--ink-black);
+    }
+
+    .btn-poster-secondary:active {
+      transform: translate(2px, 2px);
+      box-shadow: 2px 2px 0px var(--ink-black);
+    }
+
+    /* Curator Photograph (Clean Poster Frame) */
+    .curator-photo-frame {
+      display: flex;
+      justify-content: center;
+      position: relative;
+    }
+
+    .photo-card-wrapper {
+      background: var(--retro-cream);
+      border: 3px solid var(--ink-black);
+      padding: 8px;
+      box-shadow: var(--shadow-block-lg);
+      max-width: 300px;
+      width: 100%;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+
+    .photo-card-wrapper:hover {
+      transform: translateY(-3px);
+      box-shadow: 8px 8px 0px var(--ink-black);
+    }
+
+    .curator-photo-img {
+      width: 100%;
+      height: auto;
+      display: block;
+      border: 2px solid var(--ink-black);
+      filter: contrast(1.04) sepia(0.06);
+    }
+
+    /* ==========================================================================
+       SECTION HEADERS (Retro Woodblock & Stars)
+       ========================================================================== */
+    .section-shell {
+      margin-bottom: 45px;
+      padding-top: 26px;
+      border-top: 3px solid var(--ink-black);
+    }
+
+    .section-title-wrap {
+      text-align: center;
+      margin-bottom: 24px;
+      position: relative;
+    }
+
+    .section-pill-tag {
+      font-family: var(--font-display);
+      font-size: 1rem;
+      letter-spacing: 0.12em;
+      color: var(--retro-red);
+      text-transform: uppercase;
+      display: inline-block;
+      margin-bottom: 2px;
+    }
+
+    .section-main-heading {
+      font-family: var(--font-display);
+      font-size: clamp(2rem, 4vw, 3.2rem);
+      font-weight: 900;
+      text-transform: uppercase;
+      color: var(--ink-black);
+      letter-spacing: 0.06em;
+      line-height: 1;
+    }
+
+    .section-divider-graphic {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 14px;
+      margin-top: 6px;
+      color: var(--retro-teal);
+    }
+
+    .divider-dash {
+      width: 45px;
+      height: 2px;
+      background: var(--ink-black);
+    }
+
+    /* ==========================================================================
+       ABOUT SECTION
+       ========================================================================== */
+    .about-pulp-card {
+      background: var(--bg-card);
+      border: 3px solid var(--ink-black);
+      border-left: 10px solid var(--retro-teal);
+      padding: 26px 28px;
+      box-shadow: var(--shadow-block);
+      position: relative;
+    }
+
+    .about-dropcap {
+      float: left;
+      font-family: var(--font-display);
+      font-size: 4.8rem;
+      line-height: 0.8;
+      padding-right: 14px;
+      padding-top: 4px;
+      color: var(--retro-red);
+      text-shadow: 2px 2px 0 var(--ink-black);
+    }
+
+    .about-lead-copy {
+      font-family: var(--font-serif);
+      font-size: 1.15rem;
+      line-height: 1.75;
+      text-align: justify;
+      color: var(--ink-charcoal);
+    }
+
+    /* ==========================================================================
+       EXHIBITS (3-Card Layout with Halftone and Block Shadow)
+       ========================================================================== */
+    .exhibits-deck {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+      gap: 24px;
+    }
+
+    .exhibit-poster-card {
+      background: var(--bg-card);
+      border: 3px solid var(--ink-black);
+      padding: 22px;
+      box-shadow: var(--shadow-block);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      position: relative;
+      transition: all 0.2s ease;
+    }
+
+    .exhibit-poster-card:hover {
+      transform: translate(-3px, -3px);
+      box-shadow: var(--shadow-block-lg);
+      background-color: var(--bg-paper-light);
+    }
+
+    .exhibit-top-band {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 2px solid var(--ink-black);
+      padding-bottom: 8px;
+      margin-bottom: 12px;
+    }
+
+    .exhibit-num-tag {
+      font-family: var(--font-display);
+      font-size: 1.25rem;
+      letter-spacing: 0.08em;
+      color: var(--retro-red);
+    }
+
+    .exhibit-status-pill {
+      font-family: var(--font-mono);
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 2px 7px;
+      border: 1px solid var(--ink-black);
+      background: var(--retro-cream);
+      color: var(--ink-black);
+      box-shadow: 1px 1px 0 var(--ink-black);
+    }
+
+    .exhibit-card-title {
+      font-family: var(--font-display);
+      font-size: 1.75rem;
+      font-weight: 900;
+      line-height: 1.05;
+      color: var(--ink-black);
+      margin-bottom: 6px;
+    }
+
+    .exhibit-role-subtitle {
+      font-family: var(--font-serif);
+      font-style: italic;
+      font-size: 0.88rem;
+      color: var(--retro-teal);
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .exhibit-desc-text {
+      font-size: 0.92rem;
+      line-height: 1.6;
+      color: var(--ink-charcoal);
+      margin-bottom: 18px;
+    }
+
+    .exhibit-instruments-box {
+      border-top: 1.5px dashed var(--ink-black);
+      padding-top: 12px;
+    }
+
+    .inst-label-text {
+      font-family: var(--font-mono);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      color: var(--ink-muted);
+      display: block;
+      margin-bottom: 8px;
+    }
+
+    .inst-tags-flex {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+
+    .inst-badge {
+      background: var(--ink-black);
+      color: var(--retro-cream);
+      font-family: var(--font-mono);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 3px 8px;
+      border-radius: 2px;
+    }
+
+    /* ==========================================================================
+       CAPABILITIES & TRADES (2-Column Matchbook Ledger)
+       ========================================================================== */
+    .capabilities-deck {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+    }
+
+    @media (max-width: 768px) {
+      .capabilities-deck {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .capability-poster-col {
+      background: var(--bg-card);
+      border: 3px solid var(--ink-black);
+      box-shadow: var(--shadow-block);
+      padding: 22px;
+    }
+
+    .capability-banner-title {
+      font-family: var(--font-display);
+      font-size: 1.65rem;
+      color: var(--retro-teal);
+      border-bottom: 2px solid var(--ink-black);
+      padding-bottom: 8px;
+      margin-bottom: 16px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      letter-spacing: 0.05em;
+    }
+
+    .trade-list-deck {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+
+    .trade-row-item {
+      font-size: 0.95rem;
+      padding-left: 22px;
+      position: relative;
+      line-height: 1.45;
+      border-bottom: 1px dotted rgba(27, 22, 18, 0.25);
+      padding-bottom: 8px;
+      font-weight: 700;
+    }
+
+    .trade-row-item:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+
+    .trade-row-item::before {
+      content: "☞";
+      position: absolute;
+      left: 0;
+      color: var(--retro-red);
+      font-weight: 900;
+      font-size: 1.1rem;
+    }
+
+    /* ==========================================================================
+       CONTACT & TELEGRAPH DESK
+       ========================================================================== */
+    .contact-poster-shell {
+      background: var(--bg-card);
+      border: 3px solid var(--ink-black);
+      box-shadow: var(--shadow-block-lg);
+      padding: 32px 24px;
+      text-align: center;
+      margin-bottom: 30px;
+      position: relative;
+    }
+
+    .contact-details-row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 18px;
+      font-size: 0.92rem;
+      font-weight: 700;
+      margin: 20px 0 24px 0;
+      color: var(--retro-teal);
+    }
+
+    .contact-anchor-link {
+      color: var(--retro-teal);
+      text-decoration: none;
+      border-bottom: 1px dashed var(--retro-teal);
+      transition: color 0.15s ease;
+    }
+
+    .contact-anchor-link:hover {
+      color: var(--retro-red);
+      border-color: var(--retro-red);
+    }
+
+    .contact-actions-deck {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+    }
+
+    /* Footer Colophon */
+    .poster-footer {
+      border-top: 3px solid var(--ink-black);
+      padding-top: 16px;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--ink-muted);
+      text-transform: uppercase;
+      letter-spacing: 0.06em;
+      font-weight: 700;
+    }
+  </style>
+</head>
 <body>
 
-    <img src="Assets/logo.jpeg" alt="Website Logo" width="80" height="80">
+  <!-- Retro Broadsheet Poster Shell -->
+  <div class="poster-container">
+    
+    <!-- Top Checkerboard Trim (Absolut Vintage Poster Style) -->
+    <div class="checker-strip"></div>
 
-    <input type="search" placeholder="Search..." aria-label="Search">
+    <div class="poster-inner">
 
-    <nav>
-        <ul>
-            <li><a href="#about">About</a></li>
-            <li><a href="#skills">Skills</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+      <!-- Top Dateline & Utility Meta Bar -->
+      <header class="top-utility-bar">
+        <div style="display: flex; align-items: center; gap: 8px;">
+          <span class="utility-tag">ISSUE #01 • 2006</span>
+          <span>GRAND DIRECTORY OF SCHOLARS & STRATEGISTS</span>
+        </div>
+        <div style="display: flex; align-items: center; gap: 12px;">
+          <span>KATHMANDU, NEPAL • GLOBAL BROADSHEET</span>
+          <button class="audio-btn" id="audioToggleBtn" title="Toggle Mechanical Typewriter Audio Effects">
+            ⌨ FX: <span id="soundLabel">ON</span>
+          </button>
+        </div>
+      </header>
 
-    <header id="home">
-        <img src="Assets/profile.jpeg" alt="Portrait of me" width="192" height="256">
-        <h1>My Portfolio</h1>
-    </header>
+      <!-- Archival Gramophone / Vintage Music Player Strip -->
+      <aside class="phonograph-strip" aria-label="Vintage Gramophone Player">
+        <div class="phonograph-left">
+          <div class="record-disc" id="recordDisc" title="Archival 78 RPM Shellac Record">
+            <div class="record-center"></div>
+          </div>
+          <div class="phonograph-info">
+            <span class="phonograph-label">
+              <span class="phonograph-status-dot" id="phonoStatusDot"></span>
+              ARCHIVAL GRAMOPHONE • 78 RPM BROADCAST
+            </span>
+            <span class="phonograph-track" id="currentTrackTitle">Original Dixieland Jazz Band – "Jazz Me Blues" (1921)</span>
+          </div>
+        </div>
 
-    <section id="about">
-        <h2>About Me</h2>
-        <p>I am a passionate and creative individual with a strong interest in technology, design, and problem-solving. I enjoy learning new skills, building useful projects, and turning ideas into practical solutions that make a difference.</p>
-    </section>
+        <div class="phonograph-controls">
+          <button class="phono-btn" id="playMusicBtn" title="Play or Pause Music">
+            <span id="playIcon">▶</span> <span id="playText">MUSIC</span>
+          </button>
+          <button class="phono-btn phono-btn-sub" id="switchTrackBtn" title="Switch Track">
+            ⏭ NEXT TRACK
+          </button>
+          <div class="phono-vol-wrap" title="Adjust Volume">
+            <span>VOL</span>
+            <input type="range" id="musicVolume" min="0" max="1" step="0.05" value="0.55" class="phono-slider" aria-label="Volume Slider" />
+          </div>
+        </div>
+      </aside>
 
-    <section id="education">
-        <h1>Education</h1>
-        <table border="1">
-            <thead>
-                <tr>
-                    <th>Course</th>
-                    <th>Institution</th>
-                    <th>Year</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>BSc Computer Science</td>
-                    <td>University</td>
-                    <td>2026</td>
-                </tr>
-                <tr>
-                    <td>Web Development</td>
-                    <td>Online Course</td>
-                    <td>2025</td>
-                </tr>
-      </tbody>
-    </table>
-    </section>
+      <!-- 1. HEADER & BRANDING (With Custom Eye Emblem) -->
+      <section class="masthead">
+        <div class="masthead-badge-row">
+          <span class="retro-stars">✦ ✧ ✶</span>
+          <div class="emblem-icon-wrap" title="Archival Emblem">
+            <img src="favicon.png" alt="Curator Emblem" class="emblem-img" />
+          </div>
+          <span class="retro-stars">✶ ✧ ✦</span>
+        </div>
 
-    <section id="skills">
-        <h2>My Skills</h2>
-        <dl>
-            <dt>Programming Languages</dt>
-            <dd>Python, JavaScript, C++</dd>
+        <h1 class="masthead-title">The Portfolio of Binesh Budathoki</h1>
+        <p class="masthead-tagline">Student Archivist & Digital Strategist</p>
 
-            <dt>Web Development</dt>
-            <dd>HTML, CSS, React</dd>
+        <!-- 3-Part Rules Bar Clearly Demarcating Degree vs Agency Practice -->
+        <div class="masthead-rules-bar">
+          <div>ACADEMIC INSTITUTION: IAU MIT NEPAL</div>
+          <div>FIELD OF STUDY: BACHELOR OF INFORMATION TECHNOLOGY (BIT)</div>
+          <div>INDUSTRY ROLE: SEO SPECIALIST AT GROW IT AGENCY</div>
+        </div>
+      </section>
 
-            <dt>Database Management</dt>
-            <dd>MySQL, MongoDB</dd>
+      <!-- Retro Navigation Bar -->
+      <nav class="retro-nav" aria-label="Poster Sections">
+        <a href="#hero">Home</a>
+        <span class="nav-bullet">✦</span>
+        <a href="#about">Curator</a>
+        <span class="nav-bullet">✦</span>
+        <a href="#exhibits">Exhibits</a>
+        <span class="nav-bullet">✦</span>
+        <a href="#capabilities">Capabilities</a>
+        <span class="nav-bullet">✦</span>
+        <a href="#contact">Contact</a>
+      </nav>
 
-            <dt>Version Control</dt>
-            <dd>Git, GitHub</dd>
-        </dl>
-    </section>
+      <!-- 2. HERO SECTION -->
+      <section id="hero" class="hero-grid">
+        <div>
+          <div class="hero-kicker-strip">
+            <span>✦ LEAD DISPATCH & CURATED RETROSPECTIVE ✦</span>
+          </div>
 
-    <section id="projects">
-        <h2>My Projects</h2>
-        <article>
-            <h3>E-commerce Site</h3>
-            <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since 1966, when designers at Letraset and James Mosley, the librarian at St Bride Printing Library in London, took a 1914 Cicero translation and scrambled it to make dummy text for Letraset's Body Type sheets. It has survived not only many decades, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised thanks to these sheets and more recently with desktop publishing software like Aldus PageMaker and Microsoft Word including versions of Lorem Ipsum.</p>
-        </article>
-    </section>
+          <h2 class="hero-title">
+            Purveyor of Digital Visibility & Information Technology
+          </h2>
 
-    <section id="contact">
-        <h2>Contact Me</h2>
-        <form>
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" placeholder="Your name" required><br><br>
+          <div class="hero-subheadline-box">
+            Documenting Undergraduate Endeavors in BIT at IAU MIT Nepal & Crafting Search Engine Optimization Strategies at GROW IT Agency.
+          </div>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" placeholder="your@email.com"><br><br>
+          <div class="hero-actions">
+            <a href="#exhibits" class="btn-poster-primary">
+              <span>View Recent Exhibits ☞</span>
+            </a>
+            <a href="#contact" class="btn-poster-secondary">
+              <span>Send a Wire (Contact)</span>
+            </a>
+          </div>
+        </div>
 
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" rows="5" placeholder="Write your message here..."></textarea><br><br>
+        <!-- Plain Curator Photograph (No Tags or Details) -->
+        <div class="curator-photo-frame">
+          <div class="photo-card-wrapper">
+            <img src="profile.jpg" alt="Photographic Portrait of Binesh Budathoki" class="curator-photo-img" />
+          </div>
+        </div>
+      </section>
 
-            <button type="submit">Send</button>
-        </form>
-    </section>
+      <!-- 3. ABOUT THE CURATOR SECTION -->
+      <section id="about" class="section-shell">
+        <div class="section-title-wrap">
+          <span class="section-pill-tag">✦ BIOGRAPHICAL DISPATCH ✦</span>
+          <h2 class="section-main-heading">About the Curator</h2>
+          <div class="section-divider-graphic">
+            <div class="divider-dash"></div>
+            <span>❖ ✦ ❖</span>
+            <div class="divider-dash"></div>
+          </div>
+        </div>
 
-    <footer>
-        <p>© 2026 All rights reserved.</p>
-    </footer>
+        <div class="about-pulp-card">
+          <p class="about-lead-copy">
+            <span class="about-dropcap">C</span>urrently pursuing an undergraduate degree in Bachelor of Information Technology (BIT) at IAU MIT Nepal, I bridge the gap between technical infrastructure and digital discovery. As an SEO Specialist at GROW IT Agency, I apply data-driven mechanics and modern search strategy to elevate online presence and drive organic growth.
+          </p>
+        </div>
+      </section>
 
+      <!-- 4. PROJECT & WORK EXHIBITS (3-Card Layout) -->
+      <section id="exhibits" class="section-shell">
+        <div class="section-title-wrap">
+          <span class="section-pill-tag">✦ ARCHIVAL PORTFOLIO ✦</span>
+          <h2 class="section-main-heading">Project & Work Exhibits</h2>
+          <div class="section-divider-graphic">
+            <div class="divider-dash"></div>
+            <span>✶ ✦ ✶</span>
+            <div class="divider-dash"></div>
+          </div>
+        </div>
+
+        <div class="exhibits-deck">
+          
+          <!-- EXHIBIT I -->
+          <article class="exhibit-poster-card">
+            <div>
+              <div class="exhibit-top-band">
+                <span class="exhibit-num-tag">EXHIBIT I</span>
+                <span class="exhibit-status-pill">Active Deployment</span>
+              </div>
+              <h3 class="exhibit-card-title">Search Engine Optimization & Growth</h3>
+              <div class="exhibit-role-subtitle">SEO Specialist at GROW IT Agency</div>
+              <p class="exhibit-desc-text">
+                Executing technical SEO audits, keyword research, on-page optimization, and content strategy to improve search rankings and organic audience acquisition.
+              </p>
+            </div>
+            <div class="exhibit-instruments-box">
+              <span class="inst-label-text">Instruments Employed:</span>
+              <div class="inst-tags-flex">
+                <span class="inst-badge">Technical SEO</span>
+                <span class="inst-badge">Keyword Research</span>
+                <span class="inst-badge">Content Strategy</span>
+                <span class="inst-badge">Analytics</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- EXHIBIT II -->
+          <article class="exhibit-poster-card">
+            <div>
+              <div class="exhibit-top-band">
+                <span class="exhibit-num-tag">EXHIBIT II</span>
+                <span class="exhibit-status-pill">In Progress (Undergraduate)</span>
+              </div>
+              <h3 class="exhibit-card-title">Bachelor of Information Technology (BIT)</h3>
+              <div class="exhibit-role-subtitle">Undergraduate Scholar at IAU MIT Nepal</div>
+              <p class="exhibit-desc-text">
+                Rigorous academic coursework focused on core computing principles, database architecture, web technologies, and software logic.
+              </p>
+            </div>
+            <div class="exhibit-instruments-box">
+              <span class="inst-label-text">Instruments Employed:</span>
+              <div class="inst-tags-flex">
+                <span class="inst-badge">Database Management</span>
+                <span class="inst-badge">Web Development</span>
+                <span class="inst-badge">Systems Analysis</span>
+              </div>
+            </div>
+          </article>
+
+          <!-- EXHIBIT III -->
+          <article class="exhibit-poster-card">
+            <div>
+              <div class="exhibit-top-band">
+                <span class="exhibit-num-tag">EXHIBIT III</span>
+                <span class="exhibit-status-pill">Continuous Practice</span>
+              </div>
+              <h3 class="exhibit-card-title">Digital Strategy & Web Architecture</h3>
+              <div class="exhibit-role-subtitle">Strategic Synergy of IT & Organic Visibility</div>
+              <p class="exhibit-desc-text">
+                Integrating foundational information technology with search engine algorithms to create performant, crawl-efficient, and discoverable digital web architectures.
+              </p>
+            </div>
+            <div class="exhibit-instruments-box">
+              <span class="inst-label-text">Instruments Employed:</span>
+              <div class="inst-tags-flex">
+                <span class="inst-badge">Web Performance</span>
+                <span class="inst-badge">Structured Data</span>
+                <span class="inst-badge">Crawl Architecture</span>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </section>
+
+      <!-- 5. CAPABILITIES & TRADES (2-Column Grid) -->
+      <section id="capabilities" class="section-shell">
+        <div class="section-title-wrap">
+          <span class="section-pill-tag">✦ REGISTERED PROFICIENCIES ✦</span>
+          <h2 class="section-main-heading">Capabilities & Trades</h2>
+          <div class="section-divider-graphic">
+            <div class="divider-dash"></div>
+            <span>✦ ❖ ✦</span>
+            <div class="divider-dash"></div>
+          </div>
+        </div>
+
+        <div class="capabilities-deck">
+          
+          <!-- Column 1: Technical Capabilities -->
+          <div class="capability-poster-col">
+            <h3 class="capability-banner-title">
+              <span>⚙ Technical Capabilities</span>
+            </h3>
+            <ul class="trade-list-deck">
+              <li class="trade-row-item">Information Technology Fundamentals</li>
+              <li class="trade-row-item">Technical & On-Page SEO</li>
+              <li class="trade-row-item">Website Optimization & Performance</li>
+              <li class="trade-row-item">HTML / CSS / Web Architecture</li>
+            </ul>
+          </div>
+
+          <!-- Column 2: Field Trades -->
+          <div class="capability-poster-col">
+            <h3 class="capability-banner-title">
+              <span>✒ Field Trades</span>
+            </h3>
+            <ul class="trade-list-deck">
+              <li class="trade-row-item">Search Engine Analytics & Audits</li>
+              <li class="trade-row-item">Keyword Research & Competitive Analysis</li>
+              <li class="trade-row-item">Digital Strategy & Content Optimization</li>
+              <li class="trade-row-item">Academic Research & Systems Study</li>
+            </ul>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- 6. CONTACT & TELEGRAPH DESK -->
+      <section id="contact" class="contact-poster-shell">
+        <div class="section-title-wrap" style="margin-bottom: 12px;">
+          <span class="section-pill-tag">✦ TRANSMIT A WIRE ✦</span>
+          <h2 class="section-main-heading">Get in Touch with the Curator</h2>
+          <div class="section-divider-graphic">
+            <div class="divider-dash"></div>
+            <span>✉ ☎ 📍</span>
+            <div class="divider-dash"></div>
+          </div>
+        </div>
+
+        <div class="contact-details-row">
+          <span>✉ Email: <a class="contact-anchor-link" href="mailto:budathokibinesh2@gmail.com">budathokibinesh2@gmail.com</a></span>
+          <span>•</span>
+          <span>☎ Phone: <a class="contact-anchor-link" href="tel:+9779824355678">+977 9824355678</a></span>
+          <span>•</span>
+          <span>📍 Location: Nepal</span>
+        </div>
+
+        <div class="contact-actions-deck">
+          <a href="mailto:budathokibinesh2@gmail.com" class="btn-poster-primary">
+            <span>✉ Send an Email Dispatch</span>
+          </a>
+          <a href="tel:+9779824355678" class="btn-poster-secondary">
+            <span>☎ Dial Telephone Wire</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- Footer Colophon -->
+      <footer class="poster-footer">
+        <p>Created by Binesh Budathoki | BIT Undergraduate & SEO Specialist | IAU MIT Nepal</p>
+      </footer>
+
+    </div> <!-- /poster-inner -->
+
+    <!-- Bottom Checkered Racing Trim -->
+    <div class="checker-strip checker-strip-bottom"></div>
+
+  </div> <!-- /poster-container -->
+
+  <!-- Audio Synthesizer & Vintage Gramophone Engine -->
+  <script>
+    /* Mechanical Typewriter Sound Synthesizer */
+    class RetroSoundEngine {
+      constructor() {
+        this.enabled = true;
+        this.ctx = null;
+      }
+      init() {
+        if (!this.ctx) {
+          const AudioContext = window.AudioContext || window.webkitAudioContext;
+          if (AudioContext) this.ctx = new AudioContext();
+        }
+      }
+      playClick() {
+        if (!this.enabled) return;
+        this.init();
+        if (!this.ctx) return;
+        try {
+          const osc = this.ctx.createOscillator();
+          const gain = this.ctx.createGain();
+          osc.type = 'triangle';
+          osc.frequency.setValueAtTime(160 + Math.random() * 40, this.ctx.currentTime);
+          osc.frequency.exponentialRampToValueAtTime(30, this.ctx.currentTime + 0.04);
+          gain.gain.setValueAtTime(0.2, this.ctx.currentTime);
+          gain.gain.exponentialRampToValueAtTime(0.001, this.ctx.currentTime + 0.04);
+          osc.connect(gain);
+          gain.connect(this.ctx.destination);
+          osc.start();
+          osc.stop(this.ctx.currentTime + 0.05);
+        } catch (e) {}
+      }
+    }
+
+    const sound = new RetroSoundEngine();
+    const audioBtn = document.getElementById('audioToggleBtn');
+    const soundLabel = document.getElementById('soundLabel');
+
+    if (audioBtn) {
+      audioBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
+        sound.enabled = !sound.enabled;
+        soundLabel.textContent = sound.enabled ? 'ON' : 'MUTED';
+        if (sound.enabled) sound.playClick();
+      });
+    }
+
+    // Attach typewriter clicks to links & buttons (excluding phonograph controls to keep audio clean)
+    document.querySelectorAll('a, button').forEach(el => {
+      if (!el.closest('.phonograph-controls') && el.id !== 'audioToggleBtn') {
+        el.addEventListener('mouseenter', () => sound.playClick());
+        el.addEventListener('click', () => sound.playClick());
+      }
+    });
+
+    /* Archival Gramophone 78 RPM Music Player */
+    const vintagePlaylist = [
+      {
+        title: 'Original Dixieland Jazz Band – "Jazz Me Blues" (1921)',
+        fileMp3: 'vintage-jazz-1921.mp3',
+        fileOgg: 'vintage-jazz-1921.ogg'
+      },
+      {
+        title: 'Scott Joplin – "Maple Leaf Rag" (1916 Piano Roll)',
+        fileMp3: 'vintage-ragtime-1916.mp3',
+        fileOgg: 'vintage-ragtime-1916.ogg'
+      }
+    ];
+
+    let currentTrackIdx = 0;
+    const gramophoneAudio = new Audio();
+    gramophoneAudio.volume = 0.55;
+    gramophoneAudio.preload = 'auto';
+
+    const playMusicBtn = document.getElementById('playMusicBtn');
+    const playIcon = document.getElementById('playIcon');
+    const playText = document.getElementById('playText');
+    const switchTrackBtn = document.getElementById('switchTrackBtn');
+    const musicVolume = document.getElementById('musicVolume');
+    const recordDisc = document.getElementById('recordDisc');
+    const phonoStatusDot = document.getElementById('phonoStatusDot');
+    const currentTrackTitle = document.getElementById('currentTrackTitle');
+
+    function loadTrack(idx) {
+      const track = vintagePlaylist[idx];
+      currentTrackTitle.textContent = track.title;
+      // Prefer MP3 for universal compatibility, fallback to OGG
+      const canMp3 = gramophoneAudio.canPlayType('audio/mpeg');
+      gramophoneAudio.src = (canMp3 !== '') ? track.fileMp3 : track.fileOgg;
+      gramophoneAudio.load();
+    }
+
+    loadTrack(currentTrackIdx);
+
+    function updatePlayerUI(isPlaying) {
+      if (isPlaying) {
+        playIcon.textContent = '⏸';
+        playText.textContent = 'PAUSE';
+        recordDisc.classList.add('spinning');
+        phonoStatusDot.classList.add('active');
+        playMusicBtn.style.background = '#e5b32e';
+      } else {
+        playIcon.textContent = '▶';
+        playText.textContent = 'MUSIC';
+        recordDisc.classList.remove('spinning');
+        phonoStatusDot.classList.remove('active');
+        playMusicBtn.style.background = 'var(--retro-gold)';
+      }
+    }
+
+    function togglePlay() {
+      if (gramophoneAudio.paused) {
+        gramophoneAudio.play()
+          .then(() => updatePlayerUI(true))
+          .catch(err => {
+            console.log('Playback requires user gesture:', err);
+          });
+      } else {
+        gramophoneAudio.pause();
+        updatePlayerUI(false);
+      }
+    }
+
+    if (playMusicBtn) {
+      playMusicBtn.addEventListener('click', togglePlay);
+    }
+
+    if (switchTrackBtn) {
+      switchTrackBtn.addEventListener('click', () => {
+        const wasPlaying = !gramophoneAudio.paused;
+        currentTrackIdx = (currentTrackIdx + 1) % vintagePlaylist.length;
+        loadTrack(currentTrackIdx);
+        if (wasPlaying) {
+          gramophoneAudio.play()
+            .then(() => updatePlayerUI(true))
+            .catch(() => {});
+        }
+      });
+    }
+
+    if (musicVolume) {
+      musicVolume.addEventListener('input', (e) => {
+        gramophoneAudio.volume = parseFloat(e.target.value);
+      });
+    }
+
+    // Auto-advance to next track when one finishes
+    gramophoneAudio.addEventListener('ended', () => {
+      currentTrackIdx = (currentTrackIdx + 1) % vintagePlaylist.length;
+      loadTrack(currentTrackIdx);
+      gramophoneAudio.play()
+        .then(() => updatePlayerUI(true))
+        .catch(() => {});
+    });
+
+    gramophoneAudio.addEventListener('pause', () => {
+      updatePlayerUI(false);
+    });
+
+    gramophoneAudio.addEventListener('play', () => {
+      updatePlayerUI(true);
+    });
+  </script>
 </body>
 </html>
